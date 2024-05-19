@@ -4,7 +4,7 @@ apt update
 apt install pv atop  -y
 apt install zfsutils-linux -y
 
-zpool create dbdata raidz /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 -f
+zpool create dbdata /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 -f
 zfs set redundant_metadata=most dbdata
 zfs set xattr=sa dbdata
 zfs set atime=off dbdata
