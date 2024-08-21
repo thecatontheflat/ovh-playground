@@ -3,6 +3,7 @@ cp /home/ubuntu/.ssh/authorized_keys /root/.ssh/
 apt update
 apt install pv atop  -y
 apt install zfsutils-linux -y
+apt install openvswitch-switch-dpdk -y
 
 zpool create dbdata /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 -f
 zfs set redundant_metadata=most dbdata
