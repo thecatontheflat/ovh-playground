@@ -16,6 +16,6 @@ zfs set recordsize=16k dbdata
 sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 apt-get update
-apt install postgresql-15 postgresql-server-dev-15 make gcc -y
+apt install postgresql-16 postgresql-server-dev-16 make gcc -y
 
 chown postgres:postgres /dbdata
