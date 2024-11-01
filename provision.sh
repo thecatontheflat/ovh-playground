@@ -11,6 +11,7 @@ zfs set xattr=sa dbdata
 zfs set atime=off dbdata
 zfs set compression=lz4 dbdata
 zfs set recordsize=16k dbdata
+zfs set ashift=12
 
 sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
