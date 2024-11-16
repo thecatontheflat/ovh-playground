@@ -1,5 +1,3 @@
-cp /home/ubuntu/.ssh/authorized_keys /root/.ssh/
-
 apt update
 apt install pv atop  -y
 apt install zfsutils-linux -y
