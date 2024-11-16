@@ -6,6 +6,9 @@ apt install zfsutils-linux -y
 apt install openvswitch-switch-dpdk -y
 
 zpool create dbdata /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 -f
+#zpool create -o ashift=12 dbdata /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 -f # use ashift when HDD
+
+
 zfs set redundant_metadata=most dbdata
 zfs set xattr=sa dbdata
 zfs set atime=off dbdata
